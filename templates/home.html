@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+{% block title %}Enter Your Details Here{% endblock %}
+{% block content %}
+    <div class="card">
+        <div class="card-header bg-secondary">ENTER YOUR DETAILS</p>
+        </div>
+        <div class="card-body">
+            <form method="post" action="/all">
+                <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label">Email address</label>
+                <input type="email" name="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                </div>
+                <div class="mb-3">
+                <label for="exampleInputPassword1" class="form-label">Password</label>
+                <input type="password"  name="password" class="form-control" id="exampleInputPassword1">
+                </div>
+                <div class="mb-3">
+                    <label for="username" class="form-label">Username</label>
+                    <input type="text" name="username" class="form-control" id="firstname">
+                </div> 
+                <div class="mb-3">
+                    <label for="db" class="form-label">SELECT DATABASE</label>
+                    <select class="form-control" name="db" id="db">
+                        <option value="postgres">Birth and Death Database</option>
+                        <option value="mariadb">Electoral Comission Database</option>
+                        <option value="mysql">GH Immigration Database</option>
+                        <option value="mssql">NHIS Database</option>
+                    </select>
+                </div>
+                
+                <button type="submit" class="btn btn-success">Submit</button>
+            </form>
+        </div>
+    </div>
+    {% endblock %}
